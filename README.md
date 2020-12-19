@@ -10,6 +10,7 @@ images as examples.
 
 1. Select either the circle or quadratic curve and derive the Hough transform for that
 case.
+
   I selected the circle for which the parameter space is a,b,r where a represents
   the x position or row of the center of the circle, b represents the y position or
   column of the center of the circle, and r represents the radius of the circle.
@@ -34,6 +35,7 @@ you worked with. Supplement the discussion with other images if needed. Max
   noisy and has some circular points of noise. In order to identify the important circles, I
   had to adjust the canny edge detector to make it subdue most of the information in the
   image.
+  
   Using the Hough transform was good because it generates a perfect circle of the radius
   and center determined, so as long as enough of the circle’s perimeter is there to vote for
   the correct center, it can identify the circle even if the circle boundary itself is broken or
@@ -41,6 +43,7 @@ you worked with. Supplement the discussion with other images if needed. Max
   However, it also means that if the circle is actually an ellipse, it will get a lot of votes for
   the center of the ellipse, but will likely draw circles with different radii. This is
   demonstrated in the circle images.
+  
   The final point I would like to talk about is that I had to choose my parameters according
   to the result I wanted. I needed to treat noisy images differently. I also had to use
   different thresholds for images with different numbers of circles. In the first image, there
